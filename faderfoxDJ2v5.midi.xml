@@ -1,0 +1,578 @@
+<MixxxMIDIPreset mixxxVersion="4.2.0+" schemaVersion="5">
+    <info>
+        <name>FaderFox DJ2 for 4.2.X Mixxx V5</name>
+        <author>Sacha Berger, Gosseyn, AQW42</author>
+        <description>MIDI Mapping for FaderFoxDJ2</description>
+        <wiki>http://www.mixxx.org/wiki/doku.php/faderfox_dj2</wiki>
+    </info>
+
+    <!-- 
+    SETUP SYSTEM MODE 
+    push both top right encoder buttons
+    All leds must be green 
+    FXcontrol must be FX2 (channel 16) 
+    -->
+
+    <controller id="FaderFoxDJ2">
+        <scriptfiles>
+            <file filename="lodash.mixxx.js" />
+            <file filename="midi-components-0.0.js" />
+            <file filename="FaderFoxDJ2v5.scripts.js" functionprefix="FaderFoxDJ2" />
+        </scriptfiles>
+        <controls>
+
+            <!-- /////////// CENTER \\\\\\\\\\\\\ -->
+
+            <!-- Crossfader -->
+            <control>
+                <group>[Master]</group>
+                <key>crossfader</key>
+                <status>0xB0</status>
+                <midino>0x03</midino>
+            </control>
+            <!-- Central knob -->
+            <control>
+                <group>[QuickEffectRack1_[Channel1]]</group>
+                <key>super1</key>
+                <status>0xB0</status>
+                <midino>0x0c</midino>
+            </control>
+            <control>
+                <group>[QuickEffectRack1_[Channel2]]</group>
+                <key>super1</key>
+                <status>0xB0</status>
+                <midino>0x0c</midino>
+            </control>
+            <!--  Volume faders -->
+            <control>
+                <group>[Channel1]</group>
+                <key>volume</key>
+                <status>0xB0</status>
+                <midino>0x00</midino>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>volume</key>
+                <status>0xB0</status>
+                <midino>0x0d</midino>
+            </control>
+            <!-- Cue A / B -->
+            <control>
+                <group>[Channel1]</group>
+                <key>pfl</key>
+                <status>0x90</status>
+                <midino>0x11</midino>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>pfl</key>
+                <status>0x90</status>
+                <midino>0x13</midino>
+            </control>
+            <!-- Cue A / B Shift (library move)-->
+            <control>
+                <group>[Library]</group>
+                <key>MoveFocusForward</key>
+                <status>0x90</status>
+                <midino>0x20</midino>
+            </control>
+            <control>
+                <group>[Library]</group>
+                <key>GoToItem</key>
+                <status>0x90</status>
+                <midino>0x22</midino>
+            </control>
+
+            <!-- /////////// TOP ENCODERS \\\\\\\\\\\\\ -->
+
+            <!-- Seek/Scratch -->
+            <control>
+                <group>[Channel1]</group>
+                <key>FaderFoxDJ2.seekscratch_turn</key>
+                <status>0xB0</status>
+                <midino>0x0E</midino>
+                <options>
+                    <Script-Binding />
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>FaderFoxDJ2.seekscratch_push</key>
+                <status>0x90</status>
+                <midino>0x09</midino>
+                <options>
+                    <Script-Binding />
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>FaderFoxDJ2.seekscratch_pushturn</key>
+                <status>0xB0</status>
+                <midino>0x10</midino>
+                <options>
+                    <Script-Binding />
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>FaderFoxDJ2.seekscratch_turn</key>
+                <status>0xB0</status>
+                <midino>0x0F</midino>
+                <options>
+                    <Script-Binding />
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>FaderFoxDJ2.seekscratch_push</key>
+                <status>0x90</status>
+                <midino>0x0A</midino>
+                <options>
+                    <Script-Binding />
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>FaderFoxDJ2.seekscratch_pushturn</key>
+                <status>0xB0</status>
+                <midino>0x11</midino>
+                <options>
+                    <Script-Binding />
+                </options>
+            </control>
+
+            <!-- List/Load -->
+            <control>
+                <group>[Library]</group>
+                <key>MoveDown</key>
+                <status>0x90</status>
+                <midino>0x0B</midino>
+            </control>
+            <control>
+                <group>[Library]</group>
+                <key>MoveUp</key>
+                <status>0x90</status>
+                <midino>0x0C</midino>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>LoadSelectedTrack</key>
+                <status>0x90</status>
+                <midino>0x0F</midino>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>LoadSelectedTrack</key>
+                <status>0x90</status>
+                <midino>0x10</midino>
+            </control>
+
+            <!-- Pitch (BPM) -->
+            <control>
+                <group>[Channel1]</group>
+                <key>FaderFoxDJ2.pitch_turn</key>
+                <status>0xB0</status>
+                <midino>0x1b</midino>
+                <options>
+                    <Script-Binding />
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>FaderFoxDJ2.pitch_pushturn</key>
+                <status>0xB0</status>
+                <midino>0x1f</midino>
+                <options>
+                    <Script-Binding />
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>FaderFoxDJ2.pitch_turn</key>
+                <status>0xB0</status>
+                <midino>0x1c</midino>
+                <options>
+                    <Script-Binding />
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>FaderFoxDJ2.pitch_pushturn</key>
+                <status>0xB0</status>
+                <midino>0x20</midino>
+                <options>
+                    <Script-Binding />
+                </options>
+            </control>
+
+            <!-- Gain -->
+            <control>
+                <group>[Channel1]</group>
+                <key>pregain</key>
+                <status>0xB0</status>
+                <midino>0x07</midino>
+                <options>
+                    <diff />
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>pregain_set_default</key>
+                <status>0x90</status>
+                <midino>0x48</midino>
+                <options>
+                    <invert />
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>FaderFoxDJ2.gain_pushturn</key>
+                <status>0xB0</status>
+                <midino>0x23</midino>
+                <options>
+                    <Script-Binding />
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>pregain</key>
+                <status>0xB0</status>
+                <midino>0x0A</midino>
+                <options>
+                    <diff />
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>pregain_set_default</key>
+                <status>0x90</status>
+                <midino>0x4D</midino>
+                <options>
+                    <invert />
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>FaderFoxDJ2.gain_pushturn</key>
+                <status>0xB0</status>
+                <midino>0x24</midino>
+                <options>
+                    <Script-Binding />
+                </options>
+            </control>
+
+            <!-- Shift seek/scratch/list/load -->
+            <control>
+                <group>[Channel1]</group>
+                <key>sync_enabled</key>
+                <status>0x90</status>
+                <midino>0x0D</midino>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>sync_enabled</key>
+                <status>0x90</status>
+                <midino>0x0E</midino>
+            </control>
+
+            <!-- /////////// EQ SECTIONS \\\\\\\\\\\\\ -->
+
+            <!-- Fx ctrl shift -->
+            <control>
+                <group>[EffectRack1_EffectUnit1]</group>
+                <key>group_[Channel1]_enable</key>
+                <status>0x90</status>
+                <midino>0x23</midino>
+            </control>
+            <control>
+                <group>[EffectRack1_EffectUnit2]</group>
+                <key>group_[Channel1]_enable</key>
+                <status>0x90</status>
+                <midino>0x24</midino>
+            </control>
+            <control>
+                <group>[EffectRack1_EffectUnit1]</group>
+                <key>group_[Channel2]_enable</key>
+                <status>0x90</status>
+                <midino>0x42</midino>
+            </control>
+            <control>
+                <group>[EffectRack1_EffectUnit2]</group>
+                <key>group_[Channel2]_enable</key>
+                <status>0x90</status>
+                <midino>0x41</midino>
+            </control>
+
+            <!-- Fx ctrl (kill mid and high) -->
+            <control>
+                <group>[EqualizerRack1_[Channel1]_Effect1]</group>
+                <key>button_parameter2</key>
+                <status>0x90</status>
+                <midino>0x14</midino>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel1]_Effect1]</group>
+                <key>button_parameter3</key>
+                <status>0x90</status>
+                <midino>0x15</midino>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel2]_Effect1]</group>
+                <key>button_parameter3</key>
+                <status>0x90</status>
+                <midino>0x33</midino>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel2]_Effect1]</group>
+                <key>button_parameter2</key>
+                <status>0x90</status>
+                <midino>0x32</midino>
+            </control>
+
+            <!-- EQ knobs -->
+            <control>
+                <group>[EqualizerRack1_[Channel1]_Effect1]</group>
+                <key>parameter1</key>
+                <status>0xB0</status>
+                <midino>0x01</midino>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel1]_Effect1]</group>
+                <key>parameter2</key>
+                <status>0xB0</status>
+                <midino>0x02</midino>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel1]_Effect1]</group>
+                <key>parameter3</key>
+                <status>0xB0</status>
+                <midino>0x05</midino>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel2]_Effect1]</group>
+                <key>parameter1</key>
+                <status>0xB0</status>
+                <midino>0x0b</midino>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel2]_Effect1]</group>
+                <key>parameter2</key>
+                <status>0xB0</status>
+                <midino>0x08</midino>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel2]_Effect1]</group>
+                <key>parameter3</key>
+                <status>0xB0</status>
+                <midino>0x09</midino>
+            </control>
+
+            <!-- Kill buttons -->
+            <control>
+                <group>[EqualizerRack1_[Channel1]_Effect1]</group>
+                <key>button_parameter1</key>
+                <status>0x90</status>
+                <midino>0x17</midino>
+            </control>
+            <control>
+                <group>[QuickEffectRack1_[Channel1]]</group>
+                <key>enabled</key>
+                <status>0x90</status>
+                <midino>0x26</midino>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel2]_Effect1]</group>
+                <key>button_parameter1</key>
+                <status>0x90</status>
+                <midino>0x35</midino>
+            </control>
+            <control>
+                <group>[QuickEffectRack1_[Channel2]]</group>
+                <key>enabled</key>
+                <status>0x90</status>
+                <midino>0x44</midino>
+            </control>
+
+            <!-- /////////// BILATERAL SUPER JOYSTICK \\\\\\\\\\\\\ -->
+            <control>
+                <group>[EffectRack1_EffectUnit1]</group>
+                <key>mix</key>
+                <status>0xB0</status>
+                <midino>0x04</midino>
+            </control>
+            <control>
+                <group>[EffectRack1_EffectUnit1]</group>
+                <key>super1</key>
+                <status>0xB0</status>
+                <midino>0x06</midino>
+            </control>
+            <control>
+                <group>[EffectRack1_EffectUnit2]</group>
+                <key>mix</key>
+                <status>0xB0</status>
+                <midino>0x14</midino>
+            </control>
+            <control>
+                <group>[EffectRack1_EffectUnit2]</group>
+                <key>super1</key>
+                <status>0xB0</status>
+                <midino>0x16</midino>
+            </control>
+
+            <!-- /////////// TRANSPORT SECTION \\\\\\\\\\\\\ -->
+
+            <!-- blue buttons (loop control) -->
+            <control>
+                <group>[Channel1]</group>
+                <key>beatloop_activate</key>
+                <status>0x90</status>
+                <midino>0x1c</midino>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>reloop_toggle</key>
+                <status>0x90</status>
+                <midino>0x1d</midino>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>loop_halve</key>
+                <status>0x90</status>
+                <midino>0x2b</midino>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>loop_double</key>
+                <status>0x90</status>
+                <midino>0x2c</midino>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>beatloop_activate</key>
+                <status>0x90</status>
+                <midino>0x3a</midino>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>reloop_toggle</key>
+                <status>0x90</status>
+                <midino>0x3b</midino>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>loop_double</key>
+                <status>0x90</status>
+                <midino>0x4a</midino>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>loop_halve</key>
+                <status>0x90</status>
+                <midino>0x49</midino>
+            </control>
+
+            <!-- cue play (Key sync) -->
+            <control>
+                <group>[Channel1]</group>
+                <key>sync_key</key>
+                <status>0x90</status>
+                <midino>0x19</midino>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>reset_key</key>
+                <status>0x90</status>
+                <midino>0x28</midino>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>sync_key</key>
+                <status>0x90</status>
+                <midino>0x37</midino>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>reset_key</key>
+                <status>0x90</status>
+                <midino>0x46</midino>
+            </control>
+
+            <!-- Play -->
+            <control>
+                <group>[Channel1]</group>
+                <key>play</key>
+                <status>0x90</status>
+                <midino>0x1a</midino>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>play</key>
+                <status>0x90</status>
+                <midino>0x29</midino>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>play</key>
+                <status>0x90</status>
+                <midino>0x38</midino>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>play</key>
+                <status>0x90</status>
+                <midino>0x47</midino>
+            </control>
+
+            <!-- unnamed top grey (hotcues) -->
+            <control>
+                <group>[Channel1]</group>
+                <key>hotcue_1_activate</key>
+                <status>0x90</status>
+                <midino>0x18</midino>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>hotcue_1_clear</key>
+                <status>0x90</status>
+                <midino>0x27</midino>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>hotcue_2_activate</key>
+                <status>0x90</status>
+                <midino>0x21</midino>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>hotcue_2_clear</key>
+                <status>0x90</status>
+                <midino>0x30</midino>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>hotcue_1_activate</key>
+                <status>0x90</status>
+                <midino>0x36</midino>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>hotcue_1_clear</key>
+                <status>0x90</status>
+                <midino>0x45</midino>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>hotcue_2_activate</key>
+                <status>0x90</status>
+                <midino>0x3F</midino>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>hotcue_2_clear</key>
+                <status>0x90</status>
+                <midino>0x4E</midino>
+            </control>
+
+        </controls>
+    </controller>
+</MixxxMIDIPreset>
