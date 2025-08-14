@@ -42,6 +42,7 @@
 | **FX Control** (X-axis) | Dry/Wet mix |
 | **FX Control** (Y-axis) | Super knob |
 | **Phones Mix** | Super FX control |
+| **Shift + Kill** | Enable Super FX |
 | **Shift + FX Ctrl 1** | Enable FX1 section |
 | **Shift + FX Ctrl 2** | Enable FX2 section |
 
