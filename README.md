@@ -1,5 +1,8 @@
 # Faderfox DJ2 Mixxx Mapping Guide
 
+This started as a rework / fine tuning of the actual Mixxx official faderfox DJ2 mapping
+Feel free to modify, copy or share this as you'd like :)
+
 ## Initial Setup
 
 **System Mode Configuration:**
