@@ -1,6 +1,6 @@
-<MixxxMIDIPreset mixxxVersion="4.2.0+" schemaVersion="5">
+<MixxxMIDIPreset mixxxVersion="2.5.0+" schemaVersion="5">
     <info>
-        <name>FaderFox DJ2 for 4.2.X Mixxx V5</name>
+        <name>FaderFox DJ2 Mixxx V5</name>
         <author>Sacha Berger, Gosseyn, AQW42</author>
         <description>MIDI Mapping for FaderFoxDJ2</description>
         <wiki>http://www.mixxx.org/wiki/doku.php/faderfox_dj2</wiki>
