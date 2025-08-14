@@ -38,6 +38,9 @@ Feel free to modify, copy or share this as you'd like :)
 | **Kill** | Mute low frequencies |
 | **FX Ctrl 1** | Mute mid frequencies |
 | **FX Ctrl 2** | Mute high frequencies |
+| **Bottom right transport button** | Keysync |
+| **Shift + Bottom right transport button** | Reset Key |
+
 
 ### Effects Section
 | Control | Action |
