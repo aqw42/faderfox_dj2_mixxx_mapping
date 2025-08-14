@@ -61,7 +61,3 @@
 | **Blue "+" Button** | Enable/disable current loop |
 | **Shift + Blue "−" Button** | Halve loop size |
 | **Shift + Blue "+" Button** | Double loop size |
-
----
-
-**Note:** This mapping assumes the controller is properly configured in System Mode as described in the setup section.
