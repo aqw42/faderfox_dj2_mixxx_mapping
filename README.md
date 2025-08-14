@@ -1,37 +1,66 @@
-# Faderfox DJ2 mixxx mapping
+# Faderfox DJ2 Mixxx Mapping Guide
 
-### Setup
+## Initial Setup
 
-    SETUP SYSTEM MODE 
-    push both top right encoder buttons
-    All leds must be green 
-    FXcontrol must be FX2 (channel 16)  
+**System Mode Configuration:**
+1. Push both top right encoder buttons simultaneously
+2. Verify all LEDs are green
+3. Confirm FX Control is set to FX2 (channel 16)
+3. Push both top right encoder buttons simultaneously again to validate
 
-### Uncommon controls
+## Control Reference
 
-shift+List/load button : Sync BPM   
-List/load turn : scroll library  
-List/load push : load track  
-Seek/Scratch turn : Beatjump 1  
-Seek/Scratch push + turn : set loop_in when pushing and loop_out when releasing. Every turn will beatjump 4  
-Pitch turn : BPM adjust (1%)    
-Pitch push + turn : BPM adjust (3%)  
-Gain turn : adjust gain  
-Gain push : Reset default gain  
-FX control : X is dry/wat, Y is super  
-Phones mix : Super FX knob  
-Shift + cueA : Cycle through library menus  
-Shift + cueB : Enter in library  
-Shift + Fx ctrl 1 : enable FX1 section  
-Shift + Fx ctrl 2 : enable FX2 section  
-Fx ctrl 1 : mute mid  
-Fx ctrl 2 : mute high  
-Kill : mute low  
-transport button top left : set Cuepoint 1  
-Shift + transport button top left : unset Cuepoint 1  
-transport button top right : set Cuepoint 2  
-Shift + transport button top right : unset Cuepoint 2  
-Blue "minus" button : Create loop    
-Blue "Plus" button : Enable/disable loop  
-Shift + Blue "minus" button : Halve loop size  
-Shift + Blue "Plus" button : Double loop size  
+### Library Navigation
+| Control | Action |
+|---------|--------|
+| **List/Load** (turn) | Scroll through library |
+| **List/Load** (push) | Load selected track |
+| **Shift + List/Load** (push) | Sync BPM |
+| **Shift + Cue A** | Cycle through library menus |
+| **Shift + Cue B** | Enter selected library menu |
+
+### Playback Controls
+| Control | Action |
+|---------|--------|
+| **Seek/Scratch** (turn) | Beatjump 1 beat |
+| **Seek/Scratch** (push + turn) | Set loop in/out points + beatjump 4 |
+| **Pitch** (turn) | Fine BPM adjust (1%) |
+| **Pitch** (push + turn) | Coarse BPM adjust (3%) |
+
+### Audio Controls
+| Control | Action |
+|---------|--------|
+| **Gain** (turn) | Adjust channel gain |
+| **Gain** (push) | Reset to default gain |
+| **Kill** | Mute low frequencies |
+| **FX Ctrl 1** | Mute mid frequencies |
+| **FX Ctrl 2** | Mute high frequencies |
+
+### Effects Section
+| Control | Action |
+|---------|--------|
+| **FX Control** (X-axis) | Dry/Wet mix |
+| **FX Control** (Y-axis) | Super knob |
+| **Phones Mix** | Super FX control |
+| **Shift + FX Ctrl 1** | Enable FX1 section |
+| **Shift + FX Ctrl 2** | Enable FX2 section |
+
+### Cue Points
+| Control | Action |
+|---------|--------|
+| **Transport** (top left) | Set Cue Point 1 |
+| **Shift + Transport** (top left) | Clear Cue Point 1 |
+| **Transport** (top right) | Set Cue Point 2 |
+| **Shift + Transport** (top right) | Clear Cue Point 2 |
+
+### Loop Controls
+| Control | Action |
+|---------|--------|
+| **Blue "−" Button** | Create new loop |
+| **Blue "+" Button** | Enable/disable current loop |
+| **Shift + Blue "−" Button** | Halve loop size |
+| **Shift + Blue "+" Button** | Double loop size |
+
+---
+
+**Note:** This mapping assumes the controller is properly configured in System Mode as described in the setup section.
